@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MapPresenting {
-    func present(viewModel: Map.ViewModel)
+    func startTrackingUserLocation()
 }
 
 final class MapPresenter: MapPresenting {
@@ -23,9 +23,9 @@ final class MapPresenter: MapPresenting {
         self.viewController = viewController
     }
 
-    // MARK: Presentation
+    // MARK: MapPresenting
 
-    func present(viewModel: Map.ViewModel) {
-        viewController?.display(viewModel: viewModel)
+    func startTrackingUserLocation() {
+        viewController?.displayUserLocation()
     }
 }

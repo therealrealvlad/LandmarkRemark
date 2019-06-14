@@ -9,10 +9,10 @@ import MapKit
 import UIKit
 
 protocol MapDisplaying: AnyObject {
-    func display(viewModel: Map.ViewModel)
+    func displayUserLocation()
 }
 
-final class MapViewController: UIViewController, MapDisplaying {
+final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegate {
     // MARK: Outlets
 
     @IBOutlet var mapView: MKMapView!
@@ -20,6 +20,7 @@ final class MapViewController: UIViewController, MapDisplaying {
     // MARK: Properties
 
     var interactor: MapInteracting!
+    var currentLocation: Domain.Location?
 
     // Hide the status bar to provide an immersive experience in the map scene
     override var prefersStatusBarHidden: Bool {
@@ -38,9 +39,31 @@ final class MapViewController: UIViewController, MapDisplaying {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor.requestLocationTrackingPermission()
     }
 
-    // MARK: Displaying
+    // MARK: MapDisplaying
 
-    func display(viewModel _: Map.ViewModel) {}
+    func displayUserLocation() {
+        mapView.setUserTrackingMode(.follow, animated: true)
+        if let location = mapView.userLocation.location {
+            currentLocation = userLocation(from: location)
+//            let note = Domain.Note(message: "He there", user: Domain.User(name: "Bob"))
+//            if let annotation = Map.ViewModel.Annotation(coordinate: location.coordinate, title: note.message, subtitle: note.user.name) as MKAnnotation {
+//                mapView.addAnnotation(annotation)
+//            }
+        }
+    }
+
+    // MARK: Private helpers
+
+    private func userLocation(from location: CLLocation) -> Domain.Location {
+        return Domain.Location(latitude: Double(location.coordinate.latitude), longitude: Double(location.coordinate.longitude))
+    }
+
+    // MARK: MKMapViewDelegate
+
+    func mapView(_: MKMapView, viewFor _: MKAnnotation) -> MKAnnotationView? {
+        return nil
+    }
 }

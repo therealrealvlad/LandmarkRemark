@@ -8,17 +8,13 @@
 
 import Foundation
 
-/// Represents a note created by a user
-struct Note {
-    /// The note's title, created by the user
-    let title: String
+extension Domain {
+    /// Represents a note created by a user
+    struct Note {
+        /// A message created by the user
+        let message: String
 
-    /// A message created by the user
-    let message: String
-
-    /// A date the message was created by the user
-    let creationDate: Date
-
-    /// The user who created the note
-    let user: User
+        /// The user who created the note
+        let user: User
+    }
 }

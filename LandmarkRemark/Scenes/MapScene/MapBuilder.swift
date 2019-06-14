@@ -19,9 +19,9 @@ final class MapBuilder: MapBuilding {
     func build() -> MapDisplaying {
         let viewController = MapViewController()
         let presenter = MapPresenter(viewController: viewController)
-        let worker = MapWorker()
+        let locationService = LocationService()
         let router = MapRouter()
-        let interactor = MapInteractor(presenter: presenter, worker: worker, router: router)
+        let interactor = MapInteractor(presenter: presenter, locationService: locationService, router: router)
         viewController.interactor = interactor
         return viewController
     }

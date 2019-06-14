@@ -8,17 +8,10 @@
 
 import Foundation
 
-/// Represents the user of the app
-struct User {
-    /// A unique user identifier
-    let id: String
-
-    /// The user's first name
-    let firstName: String
-
-    /// The user's last name
-    let lastName: String
-
-    /// An array of notes linked to this user
-    let notes: [Note]
+extension Domain {
+    /// Represents the user of the app
+    struct User {
+        /// The user's name
+        let name: String
+    }
 }
