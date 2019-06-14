@@ -11,7 +11,7 @@ protocol MapRouting {
     func routeToScene()
 }
 
-class MapRouter: NSObject, MapRouting {
+final class MapRouter: NSObject, MapRouting {
     // MARK: Routing
 
     func routeToScene() {}

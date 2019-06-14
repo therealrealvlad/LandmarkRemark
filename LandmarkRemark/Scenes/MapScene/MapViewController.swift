@@ -12,7 +12,7 @@ protocol MapDisplaying: AnyObject {
     func display(viewModel: Map.ViewModel)
 }
 
-class MapViewController: BaseViewController, MapDisplaying {
+final class MapViewController: UIViewController, MapDisplaying {
     // MARK: Outlets
 
     @IBOutlet var mapView: MKMapView!
@@ -20,6 +20,11 @@ class MapViewController: BaseViewController, MapDisplaying {
     // MARK: Properties
 
     var interactor: MapInteracting!
+
+    // Hide the status bar to provide an immersive experience in the map scene
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     // MARK: Lifecycle
 

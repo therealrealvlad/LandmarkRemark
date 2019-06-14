@@ -24,7 +24,7 @@
 		B36F911D22B31C6C00FEA8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F911C22B31C6C00FEA8E5 /* User.swift */; };
 		B36F912222B325B900FEA8E5 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36F912122B325B900FEA8E5 /* MapViewController.xib */; };
 		B36F912422B3343100FEA8E5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F912322B3343100FEA8E5 /* MainRouter.swift */; };
-		B36F912622B33BB900FEA8E5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F912522B33BB900FEA8E5 /* BaseViewController.swift */; };
+		B36F912622B33BB900FEA8E5 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F912522B33BB900FEA8E5 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		B36F911C22B31C6C00FEA8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B36F912122B325B900FEA8E5 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		B36F912322B3343100FEA8E5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		B36F912522B33BB900FEA8E5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B36F912522B33BB900FEA8E5 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 		B36F912722B33BD200FEA8E5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B36F912522B33BB900FEA8E5 /* BaseViewController.swift */,
+				B36F912522B33BB900FEA8E5 /* NavigationController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				B36F912422B3343100FEA8E5 /* MainRouter.swift in Sources */,
 				B36F911022B3158E00FEA8E5 /* MapBuilder.swift in Sources */,
 				B36F90D922B3094200FEA8E5 /* AppDelegate.swift in Sources */,
-				B36F912622B33BB900FEA8E5 /* BaseViewController.swift in Sources */,
+				B36F912622B33BB900FEA8E5 /* NavigationController.swift in Sources */,
 				B36F911722B31ADF00FEA8E5 /* DomainModel.swift in Sources */,
 				B36F911922B31B0700FEA8E5 /* Location.swift in Sources */,
 				B36F911D22B31C6C00FEA8E5 /* User.swift in Sources */,

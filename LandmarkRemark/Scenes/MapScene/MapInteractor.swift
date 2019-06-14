@@ -11,7 +11,7 @@ protocol MapInteracting {
     func perform(request: Map.RequestModel)
 }
 
-class MapInteractor: MapInteracting {
+final class MapInteractor: MapInteracting {
     // MARK: Properties
 
     let presenter: MapPresenting

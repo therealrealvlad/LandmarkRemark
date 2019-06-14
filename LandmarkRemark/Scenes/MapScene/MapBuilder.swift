@@ -13,7 +13,7 @@ protocol MapBuilding {
     func build() -> MapDisplaying
 }
 
-class MapBuilder: MapBuilding {
+final class MapBuilder: MapBuilding {
     // MARK: Build
 
     func build() -> MapDisplaying {

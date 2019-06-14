@@ -11,13 +11,15 @@ protocol MainRouting {
     func routeToMapScene(from rootViewController: UIViewController)
 }
 
-class MainRouter: NSObject, MainRouting {
+final class MainRouter: NSObject, MainRouting {
     // MARK: Routing
 
+    /// Builds the map scene and sets the map view controller on the root view controller
     func routeToMapScene(from rootViewController: UIViewController) {
         let mapViewController = MapBuilder().build()
-        if let mapViewController = mapViewController as? UIViewController {
-            rootViewController.present(mapViewController, animated: true, completion: nil)
+        if let mapViewController = mapViewController as? UIViewController,
+            let rootViewController = rootViewController as? NavigationController {
+            rootViewController.setViewControllers([mapViewController], animated: true)
         }
     }
 }

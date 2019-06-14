@@ -11,7 +11,7 @@ protocol MapWorking {
     func perform()
 }
 
-class MapWorker: MapWorking {
+final class MapWorker: MapWorking {
     // MARK: Working
 
     func perform() {}

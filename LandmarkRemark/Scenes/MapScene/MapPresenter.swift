@@ -11,7 +11,7 @@ protocol MapPresenting {
     func present(viewModel: Map.ViewModel)
 }
 
-class MapPresenter: MapPresenting {
+final class MapPresenter: MapPresenting {
     // MARK: Properties
 
     /// The interactor maintains a weak reference to the view controller, thereby preventing a memory retention cycle from forming in the VIP cycle: one of the major advantages of the VIP pattern is that the system's memory allocation for the entire scene is disposed when the view controller is destroyed
