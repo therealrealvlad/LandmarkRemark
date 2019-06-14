@@ -8,11 +8,13 @@
 
 import UIKit
 
-/// Represents a location (longitude, latitude) on the map (may be linked to either a user or a note)
-struct Location {
-    /// Longitude on the map
-    let longitude: CGFloat
+extension Domain {
+    /// Represents a location (latitude, longitude) on the map (may be linked to either a User or Note)
+    struct Location {
+        /// Latitude on the map
+        let latitude: Double
 
-    /// Latitude on the map
-    let latitude: CGFloat
+        /// Longitude on the map
+        let longitude: Double
+    }
 }
