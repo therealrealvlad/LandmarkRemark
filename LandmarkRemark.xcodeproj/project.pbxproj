@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B310D9C322B5D0AE0087C639 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B310D9C222B5D0AE0087C639 /* NoteView.xib */; };
+		B320300E22B5ADE6007A8F8C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320300D22B5ADE6007A8F8C /* NoteView.swift */; };
+		B320301322B5B6D9007A8F8C /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320301222B5B6D9007A8F8C /* ViewLoadable.swift */; };
 		B36F90D922B3094200FEA8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F90D822B3094200FEA8E5 /* AppDelegate.swift */; };
 		B36F90E022B3094300FEA8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36F90DF22B3094300FEA8E5 /* Assets.xcassets */; };
 		B36F90E322B3094300FEA8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36F90E122B3094300FEA8E5 /* LaunchScreen.storyboard */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B310D9C222B5D0AE0087C639 /* NoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
+		B320300D22B5ADE6007A8F8C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		B320301222B5B6D9007A8F8C /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
 		B36F90D522B3094200FEA8E5 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F90D822B3094200FEA8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B36F90DF22B3094300FEA8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +88,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B320300C22B5ADC7007A8F8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B320301122B5B6BF007A8F8C /* Shared */,
+				B320300D22B5ADE6007A8F8C /* NoteView.swift */,
+				B310D9C222B5D0AE0087C639 /* NoteView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B320301122B5B6BF007A8F8C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B320301222B5B6D9007A8F8C /* ViewLoadable.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		B36F90CC22B3094200FEA8E5 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +204,7 @@
 		B36F910322B3156B00FEA8E5 /* MapScene */ = {
 			isa = PBXGroup;
 			children = (
+				B320300C22B5ADC7007A8F8C /* View */,
 				B36F910422B3158E00FEA8E5 /* MapPresenter.swift */,
 				B36F910622B3158E00FEA8E5 /* MapRouter.swift */,
 				B36F910722B3158E00FEA8E5 /* MapModels.swift */,
@@ -298,6 +323,7 @@
 			files = (
 				B36F90E322B3094300FEA8E5 /* LaunchScreen.storyboard in Resources */,
 				B36F90E022B3094300FEA8E5 /* Assets.xcassets in Resources */,
+				B310D9C322B5D0AE0087C639 /* NoteView.xib in Resources */,
 				B36F912222B325B900FEA8E5 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36F911122B3158E00FEA8E5 /* MapInteractor.swift in Sources */,
+				B320301322B5B6D9007A8F8C /* ViewLoadable.swift in Sources */,
 				B36F912422B3343100FEA8E5 /* MainRouter.swift in Sources */,
 				B36F911022B3158E00FEA8E5 /* MapBuilder.swift in Sources */,
 				B36F90D922B3094200FEA8E5 /* AppDelegate.swift in Sources */,
@@ -326,6 +353,7 @@
 				B3CEF20822B3B536009E1C55 /* NavigationController.swift in Sources */,
 				B3CEF20122B386F0009E1C55 /* LocationService.swift in Sources */,
 				B36F911D22B31C6C00FEA8E5 /* User.swift in Sources */,
+				B320300E22B5ADE6007A8F8C /* NoteView.swift in Sources */,
 				B36F910E22B3158E00FEA8E5 /* MapModels.swift in Sources */,
 				B36F911B22B31C1600FEA8E5 /* Note.swift in Sources */,
 				B36F910D22B3158E00FEA8E5 /* MapRouter.swift in Sources */,
