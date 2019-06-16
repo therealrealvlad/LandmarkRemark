@@ -26,6 +26,6 @@ final class MapPresenter: MapPresenting {
     // MARK: MapPresenting
 
     func startTrackingUserLocation() {
-        viewController?.displayUserLocation()
+        viewController?.configureMapView()
     }
 }
