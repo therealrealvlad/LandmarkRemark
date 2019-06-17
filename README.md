@@ -22,7 +22,8 @@ Aside from the absence of wireframes (typical for a coding challenge, of course)
 1. A user will only be interested in seeing notes on the map that are in the near vicinity;
 2. A user will post only a short note, not an essay, so that text can be shown directly in the annotation view/callout of pins on the map;
 3. A user will enter their username when entering their note/message, so that no requirement for a logged in user is needed;
-4. A user needs to close the app and reopen it to see notes that other users have created since they last opened the app (i.e. real-time updating was not implemented).
+4. A user needs to close the app and reopen it to see notes that other users have created since they last opened the app (i.e. real-time updating was not implemented);
+5. A user needs an internet connection to see notes on the map (i.e. caching was not implemented).
 
 The work could be improved and extended in several ways. For example, I think one could store the user's username in NSDefaults after they've created their first note, then autofill the username text field using that data. One could easily implement real-time updates with RealmCloud.
 
