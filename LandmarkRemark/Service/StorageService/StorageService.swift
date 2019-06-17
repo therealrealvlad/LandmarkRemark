@@ -19,21 +19,20 @@ protocol StorageServiceProviding {
 }
 
 final class StorageService: NSObject, StorageServiceProviding {
-    
     // MARK: Constants
 
     /// Represents the namespace for storage service constants
     enum Constants {
         /// The realm instance address for the app
         static let instanceAddress = "vladusiclandmarkremark.us1.cloud.realm.io"
-        
+
         /// The auth url for the app
         static let authUrl = URL(string: "https://\(instanceAddress)")!
-        
+
         /// The realm url for the app
         static let realmUrl = URL(string: "realms://\(instanceAddress)/VladusicLandmarkRemark")!
     }
-    
+
     // MARK: Properties
 
     let name = "tony"
