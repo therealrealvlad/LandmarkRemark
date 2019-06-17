@@ -20,8 +20,8 @@ final class MapBuilder: MapBuilding {
         let viewController = MapViewController()
         let presenter = MapPresenter(viewController: viewController)
         let locationService = LocationService()
-        let router = MapRouter()
-        let interactor = MapInteractor(presenter: presenter, locationService: locationService, router: router)
+        let storageService = StorageService()
+        let interactor = MapInteractor(presenter: presenter, locationService: locationService, storageService: storageService)
         viewController.interactor = interactor
         return viewController
     }

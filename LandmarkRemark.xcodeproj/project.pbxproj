@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		607E1352ECA004FE5B7B88C1 /* Pods_LandmarkRemark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB783335687A4315F090A197 /* Pods_LandmarkRemark.framework */; };
 		B310D9C322B5D0AE0087C639 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B310D9C222B5D0AE0087C639 /* NoteView.xib */; };
+		B315482222B7138E0059AE03 /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315482122B7138E0059AE03 /* RealmNote.swift */; };
+		B315482422B714130059AE03 /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315482322B714130059AE03 /* RealmList.swift */; };
 		B320300E22B5ADE6007A8F8C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320300D22B5ADE6007A8F8C /* NoteView.swift */; };
 		B320301322B5B6D9007A8F8C /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320301222B5B6D9007A8F8C /* ViewLoadable.swift */; };
 		B36F90D922B3094200FEA8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F90D822B3094200FEA8E5 /* AppDelegate.swift */; };
@@ -15,7 +18,6 @@
 		B36F90E322B3094300FEA8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36F90E122B3094300FEA8E5 /* LaunchScreen.storyboard */; };
 		B36F90EE22B3094300FEA8E5 /* LandmarkRemarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F90ED22B3094300FEA8E5 /* LandmarkRemarkTests.swift */; };
 		B36F910B22B3158E00FEA8E5 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F910422B3158E00FEA8E5 /* MapPresenter.swift */; };
-		B36F910D22B3158E00FEA8E5 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F910622B3158E00FEA8E5 /* MapRouter.swift */; };
 		B36F910E22B3158E00FEA8E5 /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F910722B3158E00FEA8E5 /* MapModels.swift */; };
 		B36F910F22B3158E00FEA8E5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F910822B3158E00FEA8E5 /* MapViewController.swift */; };
 		B36F911022B3158E00FEA8E5 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F910922B3158E00FEA8E5 /* MapBuilder.swift */; };
@@ -26,9 +28,14 @@
 		B36F911D22B31C6C00FEA8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F911C22B31C6C00FEA8E5 /* User.swift */; };
 		B36F912222B325B900FEA8E5 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36F912122B325B900FEA8E5 /* MapViewController.xib */; };
 		B36F912422B3343100FEA8E5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F912322B3343100FEA8E5 /* MainRouter.swift */; };
+		B38D902C22B6520000A91AA4 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38D902B22B6520000A91AA4 /* AppData.swift */; };
+		B38D902E22B6527B00A91AA4 /* DataNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38D902D22B6527B00A91AA4 /* DataNote.swift */; };
+		B38D903022B6532100A91AA4 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38D902F22B6532100A91AA4 /* DataUser.swift */; };
+		B38D903322B657C300A91AA4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38D903222B657C300A91AA4 /* StorageService.swift */; };
 		B3CEF20122B386F0009E1C55 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEF20022B386F0009E1C55 /* LocationService.swift */; };
 		B3CEF20522B397CF009E1C55 /* LocationTrackingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEF20422B397CF009E1C55 /* LocationTrackingStatus.swift */; };
 		B3CEF20822B3B536009E1C55 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEF20722B3B536009E1C55 /* NavigationController.swift */; };
+		BDC20F1CB2EA863F7A5C3820 /* Pods_LandmarkRemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3CF3D1234285E214BC1EFC /* Pods_LandmarkRemarkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2281F8F8A7912669469CC8CF /* Pods-LandmarkRemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		323A7BF8A4B1064D191736C7 /* Pods-LandmarkRemark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemark.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark.release.xcconfig"; sourceTree = "<group>"; };
+		5F3CF3D1234285E214BC1EFC /* Pods_LandmarkRemarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandmarkRemarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB783335687A4315F090A197 /* Pods_LandmarkRemark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandmarkRemark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310D9C222B5D0AE0087C639 /* NoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
+		B315482122B7138E0059AE03 /* RealmNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNote.swift; sourceTree = "<group>"; };
+		B315482322B714130059AE03 /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
 		B320300D22B5ADE6007A8F8C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		B320301222B5B6D9007A8F8C /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
 		B36F90D522B3094200FEA8E5 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +67,6 @@
 		B36F90ED22B3094300FEA8E5 /* LandmarkRemarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemarkTests.swift; sourceTree = "<group>"; };
 		B36F90EF22B3094300FEA8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36F910422B3158E00FEA8E5 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
-		B36F910622B3158E00FEA8E5 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		B36F910722B3158E00FEA8E5 /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 		B36F910822B3158E00FEA8E5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B36F910922B3158E00FEA8E5 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
@@ -65,9 +77,15 @@
 		B36F911C22B31C6C00FEA8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B36F912122B325B900FEA8E5 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		B36F912322B3343100FEA8E5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		B38D902B22B6520000A91AA4 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		B38D902D22B6527B00A91AA4 /* DataNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNote.swift; sourceTree = "<group>"; };
+		B38D902F22B6532100A91AA4 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
+		B38D903222B657C300A91AA4 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		B3CEF20022B386F0009E1C55 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B3CEF20422B397CF009E1C55 /* LocationTrackingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingStatus.swift; sourceTree = "<group>"; };
 		B3CEF20722B3B536009E1C55 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		EA3EE988D186CE6C2CA2B969 /* Pods-LandmarkRemarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF324BE54F9AF41A4DAD3B9B /* Pods-LandmarkRemark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607E1352ECA004FE5B7B88C1 /* Pods_LandmarkRemark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +101,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC20F1CB2EA863F7A5C3820 /* Pods_LandmarkRemarkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8A61F304CC8362C7E563CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB783335687A4315F090A197 /* Pods_LandmarkRemark.framework */,
+				5F3CF3D1234285E214BC1EFC /* Pods_LandmarkRemarkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59737561518FE8F740EB3F54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF324BE54F9AF41A4DAD3B9B /* Pods-LandmarkRemark.debug.xcconfig */,
+				323A7BF8A4B1064D191736C7 /* Pods-LandmarkRemark.release.xcconfig */,
+				EA3EE988D186CE6C2CA2B969 /* Pods-LandmarkRemarkTests.debug.xcconfig */,
+				2281F8F8A7912669469CC8CF /* Pods-LandmarkRemarkTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B320300C22B5ADC7007A8F8C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +152,8 @@
 				B36F90D722B3094200FEA8E5 /* LandmarkRemark */,
 				B36F90EC22B3094300FEA8E5 /* LandmarkRemarkTests */,
 				B36F90D622B3094200FEA8E5 /* Products */,
+				59737561518FE8F740EB3F54 /* Pods */,
+				4F8A61F304CC8362C7E563CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				B36F90E422B3094300FEA8E5 /* Info.plist */,
+				B38D902A22B651E900A91AA4 /* Data */,
 				B3CEF1FE22B386C0009E1C55 /* Service */,
 				B36F90FE22B3150D00FEA8E5 /* Domain */,
 				B36F90F822B314A400FEA8E5 /* Delegate */,
@@ -206,7 +249,6 @@
 			children = (
 				B320300C22B5ADC7007A8F8C /* View */,
 				B36F910422B3158E00FEA8E5 /* MapPresenter.swift */,
-				B36F910622B3158E00FEA8E5 /* MapRouter.swift */,
 				B36F910722B3158E00FEA8E5 /* MapModels.swift */,
 				B36F910822B3158E00FEA8E5 /* MapViewController.swift */,
 				B36F912122B325B900FEA8E5 /* MapViewController.xib */,
@@ -216,9 +258,30 @@
 			path = MapScene;
 			sourceTree = "<group>";
 		};
+		B38D902A22B651E900A91AA4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B38D902B22B6520000A91AA4 /* AppData.swift */,
+				B38D902D22B6527B00A91AA4 /* DataNote.swift */,
+				B38D902F22B6532100A91AA4 /* DataUser.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B38D903122B657A900A91AA4 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				B38D903222B657C300A91AA4 /* StorageService.swift */,
+				B315482322B714130059AE03 /* RealmList.swift */,
+				B315482122B7138E0059AE03 /* RealmNote.swift */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
 		B3CEF1FE22B386C0009E1C55 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B38D903122B657A900A91AA4 /* StorageService */,
 				B3CEF1FF22B386D5009E1C55 /* LocationService */,
 			);
 			path = Service;
@@ -247,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B36F90F222B3094300FEA8E5 /* Build configuration list for PBXNativeTarget "LandmarkRemark" */;
 			buildPhases = (
+				350E457CEFAB669DFC673F16 /* [CP] Check Pods Manifest.lock */,
 				B36F90D122B3094200FEA8E5 /* Sources */,
 				B36F90D222B3094200FEA8E5 /* Frameworks */,
 				B36F90D322B3094200FEA8E5 /* Resources */,
+				7E4087110D8E9FFE1E1F3ED6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B36F90F522B3094300FEA8E5 /* Build configuration list for PBXNativeTarget "LandmarkRemarkTests" */;
 			buildPhases = (
+				BDF8EEF491A05A8E497E8BB2 /* [CP] Check Pods Manifest.lock */,
 				B36F90E522B3094300FEA8E5 /* Sources */,
 				B36F90E622B3094300FEA8E5 /* Frameworks */,
 				B36F90E722B3094300FEA8E5 /* Resources */,
+				1FAD3D4506ED610607AE7E91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +404,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FAD3D4506ED610607AE7E91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350E457CEFAB669DFC673F16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LandmarkRemark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E4087110D8E9FFE1E1F3ED6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF8EEF491A05A8E497E8BB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LandmarkRemarkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B36F90D122B3094200FEA8E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -349,16 +495,21 @@
 				B36F90D922B3094200FEA8E5 /* AppDelegate.swift in Sources */,
 				B3CEF20522B397CF009E1C55 /* LocationTrackingStatus.swift in Sources */,
 				B36F911722B31ADF00FEA8E5 /* Domain.swift in Sources */,
+				B38D902C22B6520000A91AA4 /* AppData.swift in Sources */,
 				B36F911922B31B0700FEA8E5 /* Location.swift in Sources */,
+				B38D902E22B6527B00A91AA4 /* DataNote.swift in Sources */,
 				B3CEF20822B3B536009E1C55 /* NavigationController.swift in Sources */,
 				B3CEF20122B386F0009E1C55 /* LocationService.swift in Sources */,
 				B36F911D22B31C6C00FEA8E5 /* User.swift in Sources */,
+				B315482222B7138E0059AE03 /* RealmNote.swift in Sources */,
+				B38D903322B657C300A91AA4 /* StorageService.swift in Sources */,
 				B320300E22B5ADE6007A8F8C /* NoteView.swift in Sources */,
+				B38D903022B6532100A91AA4 /* DataUser.swift in Sources */,
 				B36F910E22B3158E00FEA8E5 /* MapModels.swift in Sources */,
 				B36F911B22B31C1600FEA8E5 /* Note.swift in Sources */,
-				B36F910D22B3158E00FEA8E5 /* MapRouter.swift in Sources */,
 				B36F910B22B3158E00FEA8E5 /* MapPresenter.swift in Sources */,
 				B36F910F22B3158E00FEA8E5 /* MapViewController.swift in Sources */,
+				B315482422B714130059AE03 /* RealmList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +661,7 @@
 		};
 		B36F90F322B3094300FEA8E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF324BE54F9AF41A4DAD3B9B /* Pods-LandmarkRemark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -531,6 +683,7 @@
 		};
 		B36F90F422B3094300FEA8E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323A7BF8A4B1064D191736C7 /* Pods-LandmarkRemark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -552,6 +705,7 @@
 		};
 		B36F90F622B3094300FEA8E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3EE988D186CE6C2CA2B969 /* Pods-LandmarkRemarkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -573,6 +727,7 @@
 		};
 		B36F90F722B3094300FEA8E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2281F8F8A7912669469CC8CF /* Pods-LandmarkRemarkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

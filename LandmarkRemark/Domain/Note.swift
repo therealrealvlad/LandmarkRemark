@@ -16,5 +16,8 @@ extension Domain {
 
         /// The user who created the note
         let user: User
+
+        /// The location at which the user created the note
+        let location: Location
     }
 }
