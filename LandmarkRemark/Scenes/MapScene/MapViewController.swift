@@ -11,6 +11,12 @@ import UIKit
 protocol MapDisplaying: AnyObject {
     /// Configures the map view when user tracking state permits
     func configureMapView()
+
+    /// Shows stored notes on the map view
+    func show(storedNotes: [Map.ViewModel.Note])
+    
+    /// Shows the user an error message
+     func show(_ error: Error)
 }
 
 final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegate {
@@ -28,7 +34,6 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
     // MARK: Properties
 
     var interactor: MapInteracting!
-    var currentLocation: Domain.Location?
 
     // MARK: Override properties
 
@@ -57,6 +62,7 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
         super.viewDidLoad()
         mapView.delegate = self
         interactor.requestLocationTrackingPermission()
+        interactor.retrieveNotes()
     }
 
     // MARK: MapDisplaying
@@ -67,6 +73,22 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
         addNoteButton.isHidden = false
     }
 
+    func show(storedNotes: [Map.ViewModel.Note]) {
+        storedNotes.forEach {
+            if let noteLocation = $0.location {
+                let location = CLLocation(latitude: noteLocation.latitude, longitude: noteLocation.longitude)
+                self.addAnnotation(at: location, with: $0.message, $0.userName)
+            }
+        }
+    }
+    
+    func show(_ error: Error) {
+        // TODO: Handle errors for debug scheme, else just swallow the actual error here and show the user a eneric message
+        let alertController = UIAlertController(title: "A problem occurred", message: "We were unable to retrieve any notes", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+
     // MARK: Private helpers
 
     private func mapToDomain(from location: CLLocation) -> Domain.Location {
@@ -75,7 +97,21 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
 
     private func configureNoteView() {
         let noteView = NoteView.loadView()
-        noteView.configure(with: { [weak self] note in self?.addAnnotation(for: note) })
+        noteView.configure(with: { [weak self] note in
+            guard let self = self,
+                let note = note else {
+                return
+            }
+            if let location = self.mapView.userLocation.location {
+                // Add the note annotation to the map view
+                self.addAnnotation(at: location, with: note.message, note.userName)
+
+                // Store the note via the interactor
+                self.interactor.storeNote(note: Domain.Note(message: note.message, user: Domain.User(name: note.userName), location: Domain.Location(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)))
+            } else {
+                // TODO: show user an error indicating that a note cannot be created without location data
+            }
+        })
         noteView.translatesAutoresizingMaskIntoConstraints = false
         mapView.addSubview(noteView)
         noteView.leadingAnchor.constraint(equalTo: mapView.leadingAnchor).isActive = true
@@ -88,13 +124,9 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
         }
     }
 
-    private func addAnnotation(for note: Map.ViewModel.Note?) {
-        if let location = mapView.userLocation.location,
-            let note = note {
-            let annotation = Map.ViewModel.Annotation(coordinate: location.coordinate, title: note.message, subtitle: note.userName)
-            currentLocation = mapToDomain(from: location)
-            mapView.addAnnotation(annotation)
-        }
+    private func addAnnotation(at location: CLLocation, with message: String, _ userName: String) {
+        let annotation = Map.ViewModel.Annotation(coordinate: location.coordinate, title: message, subtitle: userName)
+        mapView.addAnnotation(annotation)
     }
 
     // MARK: MKMapViewDelegate

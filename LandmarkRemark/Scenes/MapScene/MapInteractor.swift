@@ -8,7 +8,14 @@
 import UIKit
 
 protocol MapInteracting {
+    /// Requests permission to track the user's location
     func requestLocationTrackingPermission()
+
+    /// Tells the interactor to store a note
+    func storeNote(note: Domain.Note)
+
+    /// Tells the interactor to retrieve stored notes
+    func retrieveNotes()
 }
 
 protocol MapLocationRequestDelegate: AnyObject {
@@ -20,14 +27,14 @@ final class MapInteractor: MapInteracting, MapLocationRequestDelegate {
 
     let presenter: MapPresenting
     let locationService: LocationServiceProviding
-    let router: MapRouting
+    let storageService: StorageServiceProviding
 
     // MARK: Lifecycle
 
-    init(presenter: MapPresenting, locationService: LocationServiceProviding, router: MapRouting) {
+    init(presenter: MapPresenting, locationService: LocationServiceProviding, storageService: StorageServiceProviding) {
         self.presenter = presenter
         self.locationService = locationService
-        self.router = router
+        self.storageService = storageService
         // Set the delegate on the location service to receive callbacks when location tracking status changes
         (locationService as? LocationService)?.delegate = self
     }
@@ -36,6 +43,21 @@ final class MapInteractor: MapInteracting, MapLocationRequestDelegate {
 
     func requestLocationTrackingPermission() {
         locationService.requestLocationTracking()
+    }
+
+    func storeNote(note: Domain.Note) {
+        storageService.store(note: note)
+    }
+
+    func retrieveNotes() {
+        storageService.configure { result in
+            switch result {
+            case let .success(notes):
+                self.presenter.show(storedNotes: notes)
+            case let .failure(error):
+                self.presenter.show(error)
+            }
+        }
     }
 
     // MARK: MapLocationRequestDelegate

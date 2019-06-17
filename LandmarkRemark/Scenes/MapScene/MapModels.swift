@@ -38,6 +38,14 @@ enum Map {
 
             /// A user name
             let userName: String
+
+            /// The location (latitude, longitude) of the note
+            struct Location {
+                let latitude: Double
+                let longitude: Double
+            }
+
+            let location: Location?
         }
     }
 }

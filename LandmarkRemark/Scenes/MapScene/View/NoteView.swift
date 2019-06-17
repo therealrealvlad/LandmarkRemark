@@ -66,7 +66,7 @@ final class NoteView: UIView, ViewLoadable, UITextFieldDelegate, NoteConfigurabl
             // TODO: Show alert to advise user to complete all text fields or else cancel
             return
         }
-        let note = Map.ViewModel.Note(message: message, userName: userName)
+        let note = Map.ViewModel.Note(message: message, userName: userName, location: nil)
         action?(note)
         removeFromSuperview()
     }
