@@ -13,7 +13,7 @@ protocol MapPresenting {
 
     /// Tells the presenter to show the stored notes
     func show(storedNotes: [Domain.Note])
-    
+
     /// Tells the presenter that an error occurred while fetching notes
     func show(_ error: Error)
 }
@@ -42,7 +42,7 @@ final class MapPresenter: MapPresenting {
         }
         viewController?.show(storedNotes: mappedNotes)
     }
-    
+
     func show(_ error: Error) {
         viewController?.show(error)
     }
