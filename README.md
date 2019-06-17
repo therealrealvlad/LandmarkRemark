@@ -13,7 +13,7 @@ I managed to complete 1-4 to varying degree of success but have not completed 5,
 
 I chose to use the CLEAN swift design pattern because it makes one's job of implementing single responsibility, dependency injection, testability etc very easy. I've included an example unit test that checks that the interactor method for requesting location tracking permisssions is called when the map view controller view loads. Of course I would hope to acheive much greater test coverage in a real app.
 
-I chose to use the RealmSwift approach for storage and remote service because it offers an interesting cloud-based solution to the persistence problem.
+I chose to use the RealmCloud/RealmSwift approach for storage and remote service because it offers an interesting cloud-based solution to the persistence problem. I also used SwiftFormat to format files prior to commiting them, and I used an xCode template file to create the initial MapScene. I used a GitFlow-type branching model, with a final merge to Master. Please run pod install from the root workspace directory prior to compiling the source to pull in the required RealmSwift pod.
 
 The entire work took me about 16-20 hours, depending on whether one counts learning and exploration time, as some of the design elements were fairly new to me (e.g. I had not used RealmSwift before, and I had not implemented the CLEAN swift design pattern from scratch before).
 
