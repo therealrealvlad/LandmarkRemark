@@ -16,7 +16,7 @@ protocol MapDisplaying: AnyObject {
     func show(storedNotes: [Map.ViewModel.Note])
 
     /// Shows the user an error message
-    func show(_ error: Error)
+    func showErrorMessage()
 }
 
 final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegate {
@@ -82,8 +82,8 @@ final class MapViewController: UIViewController, MapDisplaying, MKMapViewDelegat
         }
     }
 
-    func show(_: Error) {
-        // TODO: Handle errors for debug scheme, else just swallow the actual error here and show the user a eneric message
+    func showErrorMessage() {
+        // Note: in a real app, we would want to use StringKey localization together with the .strings file to encapsulate error messages
         let alertController = UIAlertController(title: "A problem occurred", message: "We were unable to retrieve any notes", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)

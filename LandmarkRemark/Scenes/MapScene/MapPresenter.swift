@@ -44,6 +44,8 @@ final class MapPresenter: MapPresenting {
     }
 
     func show(_ error: Error) {
-        viewController?.show(error)
+        // Note: we are swallowing the error here for simplicity
+        // In a real app, the domain-specific error types would be parsed and converted into specific messages here, then passed to the view controller for display
+        viewController?.showErrorMessage()
     }
 }

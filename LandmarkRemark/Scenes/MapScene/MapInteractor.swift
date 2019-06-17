@@ -56,6 +56,7 @@ final class MapInteractor: MapInteracting, MapLocationRequestDelegate {
                 self.presenter.show(storedNotes: notes)
             case let .failure(error):
                 self.presenter.show(error)
+                // TODO: parse error with domain-specific error handler, e.g. checking for network-type errors 
             }
         }
     }
