@@ -10,21 +10,18 @@
 import XCTest
 
 class LandmarkRemarkTests: XCTestCase {
-    var mapViewController: MapDisplaying?
+    let mapViewController = MapViewController()
     let mapInteractorSpy = MapInteractorSpy()
 
     override func setUp() {
-        mapViewController = MapBuilder().build()
+        mapViewController.interactor = mapInteractorSpy
     }
 
     func test_didRequestLocationTrackingPermission_whenMapViewControllerDidLoad() {
-        let viewController = mapViewController as? UIViewController
-
         // when
-        _ = viewController?.view
+        _ = mapViewController.view
 
         // then
-        mapInteractorSpy.requestLocationTrackingPermission()
         XCTAssertTrue(mapInteractorSpy.didRequestLocationTrackingPermission)
     }
 
